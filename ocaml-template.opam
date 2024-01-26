@@ -1,0 +1,56 @@
+# References: 
+# - Package Definition
+#   - https://opam.ocaml.org/doc/Manual.html#Package-definitions
+# - Reference files:
+#   - https://github.com/aantron/dream/blob/master/dream.opam
+#   - https://github.com/mirage/mirage-www/blob/master/mirageio.opam
+
+opam-version: "2.0"
+
+name: "TODO: The name of the package"
+version: "0.0.1"
+
+synopsis: "TODO: One sentence to describe the project"
+tags: ["TODO:" "add" "tags"]
+
+description: """
+TODO: Describe the project in more sentences
+"""
+
+authors: ["Jan Fooken <dev@janvhs.com>"]
+maintainer: ["Jan Fooken <dev@janvhs.com>"]
+license: ["GPL-3.0-or-later"]
+
+homepage: "https://git.janvhs.com/TODO"
+doc: "https://git.janvhs.com/TODO" # Normally a Website or Repo
+dev-repo: "git+https://git.janvhs.com/TODO.git"
+bug-reports: "https://git.janvhs.com/TODO/issues"
+
+depends: [
+  "ocaml" {>= "5.1"} # The minimum ocaml compiler version
+  "dune" {>= "3.12"} # The build tool
+
+  "alcotest" {with-test} # Add colours to tests
+
+  "odoc" {with-doc} # For documentation
+
+  "ocamlformat" {with-dev-setup} # For a consistent format
+  "ocaml-lsp-server" {with-dev-setup} # Autocomplete support
+  "utop" {with-dev-setup} # Quick prototyping via a REPL
+]
+
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+

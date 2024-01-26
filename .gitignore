@@ -1,0 +1,28 @@
+# Local opam switch
+/_opam
+
+# ocamlbuild working directory
+/_build
+
+# ocamlbuild targets
+*.byte
+*.native
+
+# Merlin configuring file for Vim and Emacs
+/.merlin
+
+# Dune generated files
+*.install
+
+# Files that people might accidentally include in their PRs
+*:OECustomProperty
+.DS_Store
+.vscode
+# https://neovim.io/doc/user/starting.html#initialization
+.exrc
+.nvimrc
+.nvim.lua
+# https://vimhelp.org/options.txt.html#%27exrc%27
+.vimrc
+.gvimrc
+

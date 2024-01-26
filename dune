@@ -1,0 +1,5 @@
+;; Configuring dune to recognise special folders in you project root.
+;; References: 
+;; - https://github.com/ocaml/ocaml.org/blob/main/dune
+;; - https://github.com/melange-re/melange-opam-template/blob/main/dune
+;; - https://github.com/mirage/mirage-www/blob/master/dune

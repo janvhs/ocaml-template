@@ -11,19 +11,18 @@ name: "TODO: The name of the package"
 version: "0.0.1"
 
 synopsis: "TODO: One sentence to describe the project"
-tags: ["TODO:" "add" "tags"]
-
 description: """
 TODO: Describe the project in more sentences
 """
 
-authors: ["Jan Fooken <dev@janvhs.com>"]
 maintainer: ["Jan Fooken <dev@janvhs.com>"]
+authors: ["Jan Fooken <dev@janvhs.com>"]
 license: ["GPL-3.0-or-later"]
+
+tags: ["TODO:" "add" "tags"]
 
 homepage: "https://git.janvhs.com/TODO"
 doc: "https://git.janvhs.com/TODO" # Normally a Website or Repo
-dev-repo: "git+https://git.janvhs.com/TODO.git"
 bug-reports: "https://git.janvhs.com/TODO/issues"
 
 depends: [
@@ -54,3 +53,4 @@ build: [
   ]
 ]
 
+dev-repo: "git+https://git.janvhs.com/TODO.git"
